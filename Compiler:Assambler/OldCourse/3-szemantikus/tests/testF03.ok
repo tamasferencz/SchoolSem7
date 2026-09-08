@@ -1,0 +1,5 @@
+program forFrom
+    
+begin
+    for i from 1 upto 10 do write(i); done 
+end

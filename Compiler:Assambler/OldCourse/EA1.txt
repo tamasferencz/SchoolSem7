@@ -1,0 +1,13 @@
+	Formalis nyelvek
+
+- A formalis nyelvek es automatak fogalmainak megismertetese
+- Szimbolumsorozatok
+
+- Abece: a jelek nemureses veges halmaza
+- Betu: Az abece elemeit betunek nevezzuk
+- Szo: A V abece elemeinek egy tetszoleges veges sorozatat a V abece feletti szonak nevezzuk
+	a) az u egy tetszoleges szo, akkor l(u) a szo hossza
+
+- Nyelv: V* valamely reszhalmazat a V abece feletti nyelvnek nevezzuk. Jele: L
+- Nyelvosztaly: Nyelvek valamely osszesseget nyelvosztalynak nevezzuk.
+
