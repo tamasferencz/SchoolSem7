@@ -110,7 +110,7 @@ create database link aramis_db
 using 'aramis.inf.elte.hu:1521/aramis';
 
 select *
-  from aramis_db@nikovits.folyok;
+  from nikovits.folyok@aramis_db;
 
 select *
   from nikovits.vilag_orszagai;
@@ -122,3 +122,6 @@ select *
 select *
   from nikovits.vilag_orszagai
  where tld = 'cm';
+
+select *
+  from dba_db_links;
