@@ -1,0 +1,7 @@
+if ?a1 then
+	?a1 := false
+endif
+while ?a3 do
+	?a3 := ?a2
+	?a2 := ?a1
+done

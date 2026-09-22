@@ -1,0 +1,9 @@
+A példa program nyelvben utasítások sorozatát lehet írni.
+Az utasitás lehet értékadás, elágazás, ciklus.
+A tokenizálandó lexikális egységek: alapszavak, változó, konstansok, értékadás jele.
+
+A nyelv szintaxisát leíró szabályok:
+S -> US | epszilon
+U ->  var := K | if var then S endif  | while var do S done
+K -> var | true | false
+

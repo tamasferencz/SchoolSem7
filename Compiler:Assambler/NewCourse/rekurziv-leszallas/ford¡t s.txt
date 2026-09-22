@@ -1,0 +1,6 @@
+fordítás:
+$ flex simple.l
+$ g++ -o simple simple.cc lex.yy.cc
+
+futtatás:
+$ ./simple input.txt
