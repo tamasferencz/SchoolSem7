@@ -378,4 +378,28 @@ select *
   from dba_views;
 
 
-  
+select *
+  from nikovits.folyok@aramis_db;
+
+select *
+  from nikovits.vilag_orszagai;
+
+select o.nev
+  from nikovits.orszagok o
+  join nikovits.folyok@aramis_db f
+on f.orszagok like '%'
+                   || o.tld
+                   || '%'
+ where f.nev = 'Mekong';
+
+select o.nev
+  from nikovits.orszagok o
+  join nikovits.folyok@aramis_db f
+on f.orszagok like '%'
+                   || o.tld
+                   || '%'
+ where f.nev = 'Mekong'
+ order by instr(
+   f.orszagok,
+   o.tld
+);
