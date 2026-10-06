@@ -1,0 +1,11 @@
+program pelda
+    integer n;
+    date d1;
+    date d2;
+begin
+   d1:=2021.05;
+   d2:=d1;
+   n:=year(d2)+ month(d2);
+   write(n);
+   write(month(2010.08));
+end

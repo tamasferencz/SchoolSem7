@@ -1,0 +1,11 @@
+program pelda
+    integer n;
+    date d1;
+    boolean b;
+begin
+   d1:=2021.05;
+   b:=year(d1)>2020;
+   n:=5;
+   n:=month(d1)+n;
+   write(n);
+end
