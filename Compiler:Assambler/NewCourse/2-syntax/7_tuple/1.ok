@@ -1,0 +1,10 @@
+program pelda
+    <integer, boolean, integer> a;
+    <integer, integer> b;
+    integer x;
+begin
+    a.1 := 5;
+    a.2 := true;
+    x := a.1 + b.2;
+    write(a.3);
+end

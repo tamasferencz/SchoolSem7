@@ -1,0 +1,11 @@
+program hatarok
+    integer n;
+    time t;
+begin
+    t:=00:00;
+    write(hour(t));
+    t:=23:59;
+    n:=diff(t, 00:00)+ hour(12:30);
+    write(n);
+    write(diff(00:01, t));
+end

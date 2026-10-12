@@ -21,6 +21,16 @@ date	    return Parser::T_DATE;
 year        return Parser::T_YEAR;
 month       return Parser::T_MONTH;
 
+time        return Parser::T_TIME;
+hour        return Parser::T_HOUR;
+minute      return Parser::T_MINUTE;
+diff        return Parser::T_DIFF;
+","         return Parser::T_COMMA;
+
+duplicate   return Parser::T_DUPLICATE;
+
+">>"       return Parser::T_SHIFT;
+
 boolean     return Parser::T_BOOLEAN;
 skip        return Parser::T_SKIP;
 if          return Parser::T_IF;
@@ -57,6 +67,8 @@ false       return Parser::T_FALSE;
 {LETTER}({LETTER}|{DIGIT}|_)*    return Parser::T_ID;
 
 [0-9]+\.(0[1-9]|1[0-2]) 	 return Parser::T_DATE_LIT;
+
+(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]) return Parser::T_TIME_LIT;
 
 {WS}+   // nothing to do
 

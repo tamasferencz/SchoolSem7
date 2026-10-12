@@ -1,0 +1,14 @@
+program pelda
+    integer list a;
+    integer list b;
+    boolean list c;
+    integer x;
+begin
+    x := 7;
+    b := [1,2,3,4,5,6,7];
+    a := [1, x, 2, 3, b[1]];
+    a := b ++ [100,10,1];
+    a[2] := 5;
+    x := a[1];
+    a += [2, 4, 6, 8, 10, 100];
+end

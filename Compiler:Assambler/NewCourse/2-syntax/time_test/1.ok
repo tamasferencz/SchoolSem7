@@ -1,0 +1,14 @@
+program idopelda
+    integer n;
+    integer m;
+    time t1;
+    time t2;
+begin
+    t1:=08:15;
+    t2:=t1;
+    n:=hour(t2)*60+ minute(t2);
+    write(n);
+    m:=diff(t1, 17:45);
+    write(m);
+    write(minute(23:59));
+end

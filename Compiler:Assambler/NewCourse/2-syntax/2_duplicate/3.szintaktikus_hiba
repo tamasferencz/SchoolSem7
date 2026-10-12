@@ -1,0 +1,5 @@
+program pelda
+    integer a;
+begin
+    a := duplicate 3;
+end

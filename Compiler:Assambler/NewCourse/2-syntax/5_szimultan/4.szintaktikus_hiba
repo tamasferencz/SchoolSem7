@@ -1,0 +1,7 @@
+program pelda
+    integer x;
+    integer y;
+    integer z;
+begin
+    x,y,z := 1, 2;
+end

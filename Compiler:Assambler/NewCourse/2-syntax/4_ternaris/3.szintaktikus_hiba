@@ -1,0 +1,6 @@
+program pelda
+    integer a;
+begin
+    a := 1;
+    a := (true ? 1);
+end

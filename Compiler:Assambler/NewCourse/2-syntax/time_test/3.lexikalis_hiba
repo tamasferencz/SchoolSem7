@@ -1,0 +1,9 @@
+program pelda
+    integer n;
+    time t1;
+begin
+    t1:=08:15;
+    t1:=24:00;
+    n:=hour(t1);
+    write(n);
+end

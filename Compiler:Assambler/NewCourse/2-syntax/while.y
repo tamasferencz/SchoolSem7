@@ -20,7 +20,13 @@
 %token T_ID
 %token T_DATE T_YEAR T_MONTH T_DATE_LIT
 
+%token T_TIME T_HOUR T_MINUTE T_DIFF T_COMMA T_TIME_LIT
+
+%tokent T_DUPLICATE
+
+
 // later line = the operator has higher priority
+%left T_SHIFT
 %left T_OR T_AND
 %left T_EQ
 %left T_LESS T_GR
@@ -52,19 +58,36 @@ declarations:
 ;
 
 declaration:
-    T_INTEGER T_ID T_SEMICOLON
+    T_INTEGER id_list T_SEMICOLON
     {
-        std::cout << "declaration -> T_INTEGER T_ID T_SEMICOLON" << std::endl;
+       std::cout << "declaration -> T_INTEGER id_list T_SEMICOLON" << std::endl;
     }
 |
-    T_BOOLEAN T_ID T_SEMICOLON
+    T_BOOLEAN id_list T_SEMICOLON
     {
-        std::cout << "declaration -> T_BOOLEAN T_ID T_SEMICOLON" << std::endl;
+        std::cout << "declaration -> T_BOOLEAN id_list T_SEMICOLON" << std::endl;
     }
 | 
     T_DATE T_ID T_SEMICOLON
     {
        std::cout << "declaration -> T_DATE T_ID T_SEMICOLON" << std::endl;
+    }
+|
+    T_TIME T_ID T_SEMICOLON
+    {
+      std::cout << "decalration -> T_TIME T_ID T_SEMICOLON" << std::endl;
+    }
+;
+
+id_list:
+    T_ID
+    {
+      std::cout << "id_list -> T_ID" << std::endl;
+    } 
+|
+    T_ID T_COMMA id_list
+    {
+      std::cout << "id_list -> T_ID T_COMMA id_list" << std::endl;
     }
 ;
 
@@ -109,6 +132,11 @@ statement:
     loop
     {
         std::cout << "statement -> loop" << std::endl;
+    }
+|
+    T_DUPLICATE statement
+    {
+       std::cout << "statement -> T_DUPLICATE statement" << std::endl;
     }
 ;
 
@@ -246,5 +274,30 @@ expression:
    T_MONTH T_OPEN expression T_CLOSE
    {
       std::cout << "expression -> T_MONTH T_OPEN expression T_CLOSE" << std::endl;
+   }
+|
+   T_TIME_LIT
+   {
+      std::cout << "expression -> T_TIME_LIT" << std::endl;
+   }
+|
+   T_HOUR T_OPEN expression T_CLOSE
+   {
+     std::cout << "expression -> T_HOUR T_OPEN expression T_CLOSE" << std::endl;
+   }
+|
+   T_MINUTE T_OPEN expression T_CLOSE
+   {
+     std::cout << "expression -> T_MINUTE T_OPEN expression T_CLOSE" << std::endl;
+   }
+|
+   T_DIFF T_OPEN expression T_COMMA expression T_CLOSE
+   {
+     std::cout << "expression -> T_DIFF T_OPEN expression T_COMMA expression T_CLOSE" << std::endl;
+   }
+|
+   expression T_SHIFT expression
+   {
+     std::cout << "expression -> expression T_SHIFT expression" << std::endl;
    }
 ;

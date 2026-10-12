@@ -1,0 +1,5 @@
+program pelda
+    integer a;
+begin
+    a := >> 2;
+end

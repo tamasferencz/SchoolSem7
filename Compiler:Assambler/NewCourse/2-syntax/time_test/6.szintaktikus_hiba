@@ -1,0 +1,9 @@
+program pelda
+    integer n;
+    time t1;
+begin
+    t1:=12:30;
+    write(t1);
+    n:=diff(t1);
+    write(n);
+end

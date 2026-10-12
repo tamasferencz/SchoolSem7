@@ -1,0 +1,6 @@
+program pelda
+    integer a;
+    integer b;
+begin
+    [a := b];
+end

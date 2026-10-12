@@ -1,0 +1,7 @@
+program pelda
+    integer list a;
+    integer list b;
+begin
+    a := [1];
+    b := a + + [2];
+end

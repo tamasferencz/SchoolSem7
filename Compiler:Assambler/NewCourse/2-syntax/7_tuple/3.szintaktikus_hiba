@@ -1,0 +1,5 @@
+program pelda
+    <integer, boolean a;
+begin
+    a.1 := 1;
+end

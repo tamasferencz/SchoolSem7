@@ -1,0 +1,6 @@
+program pelda
+    integer a;
+    duplicate integer b;
+begin
+    a := 1;
+end

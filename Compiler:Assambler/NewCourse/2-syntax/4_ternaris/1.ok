@@ -1,0 +1,9 @@
+program pelda
+    integer a;
+    boolean b;
+begin
+    b := true;
+    a := (true?1:2);
+    a := (b ? 1 + 2 : (false ? 3 : 4));
+    write((b ? a : 0));
+end

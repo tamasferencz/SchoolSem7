@@ -1,0 +1,6 @@
+program pelda
+    <integer, integer> a;
+begin
+    a.1 := 1;
+    a.(1+1) := 2;
+end

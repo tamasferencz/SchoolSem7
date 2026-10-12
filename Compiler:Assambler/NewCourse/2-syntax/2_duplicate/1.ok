@@ -1,0 +1,8 @@
+program pelda
+    integer a;
+begin
+    a := 1;
+    duplicate write(a);
+    duplicate a := a + 1;
+    duplicate duplicate write(a);
+end

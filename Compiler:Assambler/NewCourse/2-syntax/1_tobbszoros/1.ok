@@ -1,0 +1,9 @@
+program pelda
+    integer a, b, c;
+    boolean x;
+    integer d;
+    boolean y, z;
+begin
+    a := 1;
+    write(a);
+end

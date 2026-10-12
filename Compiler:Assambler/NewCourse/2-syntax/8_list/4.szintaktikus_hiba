@@ -1,0 +1,5 @@
+program pelda
+    integer list a;
+begin
+    a := [1, 2, ];
+end
