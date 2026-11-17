@@ -1,0 +1,1 @@
+--zh2: megelozo grafot kell rajzolni
